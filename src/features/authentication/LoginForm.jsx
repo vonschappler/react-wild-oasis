@@ -7,10 +7,11 @@ import FormRowVertical from '../../ui/FormRowVertical';
 import SpinnerMini from '../../ui/SpinnerMini';
 
 import { useLogin } from './useLogin';
+import Heading from '../../ui/Heading';
 
 function LoginForm() {
-  const [email, setEmail] = useState('admin@example.com');
-  const [password, setPassword] = useState('123123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const { login, isLoggingIn } = useLogin();
 
   function handleSubmit(e) {
@@ -54,6 +55,13 @@ function LoginForm() {
         <Button size='large' disabled={isLoggingIn}>
           {!isLoggingIn ? 'Login' : <SpinnerMini />}
         </Button>
+      </FormRowVertical>
+      <FormRowVertical>
+        <Heading as='p'>
+          This is an application developed for portifilio purposes only
+        </Heading>
+        <Heading as='p'>Email: hetev79609@evvgo.com</Heading>
+        <Heading as='p'>Password: pass1234</Heading>
       </FormRowVertical>
     </Form>
   );
