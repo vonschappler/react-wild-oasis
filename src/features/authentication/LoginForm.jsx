@@ -56,11 +56,17 @@ function LoginForm() {
           {!isLoggingIn ? 'Login' : <SpinnerMini />}
         </Button>
       </FormRowVertical>
+      <hr />
       <FormRowVertical>
         <Heading as='p'>
-          This is an application developed for portifilio purposes only
+          This is an application developed for test purposes only.
         </Heading>
-        <Heading as='p'>Email: hetev79609@evvgo.com</Heading>
+        <br />
+        <Heading as='p'>
+          Feel free to test it, with the credendials below:
+        </Heading>
+        <br />
+        <Heading as='p'>Email address: hetev79609@evvgo.com</Heading>
         <Heading as='p'>Password: pass1234</Heading>
       </FormRowVertical>
     </Form>
