@@ -1,12 +1,10 @@
 import { useForm } from 'react-hook-form';
-
 import Input from '../../ui/Input';
 import Form from '../../ui/Form';
 import FormRow from '../../ui/FormRow';
 import Button from '../../ui/Button';
 import FileInput from '../../ui/FileInput';
 import Textarea from '../../ui/Textarea';
-
 import { useCreateCabin } from './useCreateCabin';
 import { useEditCabin } from './useEditCabin';
 
@@ -32,7 +30,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       editCabin(
         { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess: (data) => {
+          onSuccess: () => {
             reset();
             onCloseModal?.();
           },
@@ -42,7 +40,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       createCabin(
         { ...data, image },
         {
-          onSuccess: (data) => {
+          onSuccess: () => {
             reset();
             onCloseModal?.();
           },
@@ -69,7 +67,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           })}
         />
       </FormRow>
-
       <FormRow label='Maximum capacity: ' error={errors?.maxCapacity?.message}>
         <Input
           disabled={isWorking}
@@ -84,7 +81,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           })}
         />
       </FormRow>
-
       <FormRow label='Regular price: ' error={errors?.regularPrice?.message}>
         <Input
           disabled={isWorking}
@@ -99,7 +95,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           })}
         />
       </FormRow>
-
       <FormRow label='Discount: ' error={errors?.discount?.message}>
         <Input
           disabled={isWorking}
@@ -114,7 +109,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           })}
         />
       </FormRow>
-
       <FormRow
         label='Description for website: '
         error={errors?.description?.message}
@@ -129,7 +123,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           })}
         />
       </FormRow>
-
       <FormRow label='Cabin image: ' error={errors?.image?.message}>
         <FileInput
           id='image'
@@ -139,9 +132,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           })}
         />
       </FormRow>
-
       <FormRow>
-        {/* type is an HTML attribute! */}
         <Button
           variation='secondary'
           type='reset'

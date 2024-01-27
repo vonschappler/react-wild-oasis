@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 const StyledStat = styled.div`
-  /* Box */
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
-
   padding: 1.6rem;
   display: grid;
   grid-template-columns: 6.4rem 1fr;
@@ -21,10 +19,7 @@ const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Make these dynamic, based on the received prop */
   background-color: var(--color-${(props) => props.color}-100);
-
   & svg {
     width: 3.2rem;
     height: 3.2rem;

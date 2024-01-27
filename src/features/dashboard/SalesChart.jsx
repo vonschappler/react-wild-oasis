@@ -8,7 +8,6 @@ import {
   Area,
   ResponsiveContainer,
 } from 'recharts';
-
 import DashboardBox from './DashboardBox';
 import Heading from '../../ui/Heading';
 import { useDarkMode } from '../../context/DarkModeContext';
@@ -16,7 +15,6 @@ import {
   eachDayOfInterval,
   format,
   formatDate,
-  isDate,
   isSameDay,
   subDays,
 } from 'date-fns';
@@ -25,8 +23,6 @@ const StyledSalesChart = styled(DashboardBox)`
   grid-column: 1 / -1;
   width: 100%;
   height: 500px;
-
-  /* Hack to change grid line colors */
   & .recharts-cartesian-grid-horizontal line,
   & .recharts-cartesian-grid-vertical line {
     stroke: var(--color-grey-300);

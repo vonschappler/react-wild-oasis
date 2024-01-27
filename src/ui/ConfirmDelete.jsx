@@ -7,12 +7,10 @@ const StyledConfirmDelete = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-
   & p {
     color: var(--color-grey-500);
     margin-bottom: 1.2rem;
   }
-
   & div {
     display: flex;
     justify-content: flex-end;
@@ -28,7 +26,6 @@ function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
         Are you sure you want to delete this {resourceName} permanently? This
         action cannot be undone.
       </p>
-
       <div>
         <Button
           variation='secondary'

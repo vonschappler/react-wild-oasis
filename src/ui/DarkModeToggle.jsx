@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 function DarkModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   useEffect(
     function () {
       if (isDarkMode) {
@@ -17,6 +18,7 @@ function DarkModeToggle() {
     },
     [isDarkMode]
   );
+
   return (
     <ButtonIcon onClick={toggleDarkMode}>
       {isDarkMode ? <HiOutlineSun /> : <HiOutlineMoon />}

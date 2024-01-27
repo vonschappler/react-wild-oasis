@@ -1,6 +1,5 @@
 import { createContext, useState, cloneElement, useContext } from 'react';
 import { createPortal } from 'react-dom';
-
 import { HiXMark } from 'react-icons/hi2';
 import styled from 'styled-components';
 import useOutsideClick from '../hooks/useOutsideClick';
@@ -39,17 +38,12 @@ const Button = styled.button`
   position: absolute;
   top: 1.2rem;
   right: 1.9rem;
-
   &:hover {
     background-color: var(--color-grey-100);
   }
-
   & svg {
     width: 2.4rem;
     height: 2.4rem;
-    /* Sometimes we need both */
-    /* fill: var(--color-grey-500);
-    stroke: var(--color-grey-500); */
     color: var(--color-grey-500);
   }
 `;
@@ -58,7 +52,6 @@ const ModalContext = createContext();
 
 function Modal({ children }) {
   const [openName, setOpenName] = useState('');
-
   const close = () => setOpenName('');
   const open = setOpenName;
 
@@ -82,7 +75,6 @@ function Open({ children, opens: opensWindowName }) {
 function Window({ children, name }) {
   const { openName, close } = useContext(ModalContext);
   const ref = useOutsideClick(close);
-
   if (name !== openName) return null;
 
   return createPortal(

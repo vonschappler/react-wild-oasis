@@ -17,11 +17,9 @@ const StyledToggle = styled.button`
   border-radius: var(--border-radius-sm);
   transform: translateX(0.8rem);
   transition: all 0.2s;
-
   &:hover {
     background-color: var(--color-grey-100);
   }
-
   & svg {
     width: 2.4rem;
     height: 2.4rem;
@@ -31,11 +29,9 @@ const StyledToggle = styled.button`
 
 const StyledList = styled.ul`
   position: fixed;
-
   background-color: var(--color-grey-0);
   box-shadow: var(--shadow-md);
   border-radius: var(--border-radius-md);
-
   right: ${(props) => props.position.x}px;
   top: ${(props) => props.position.y}px;
 `;
@@ -48,15 +44,12 @@ const StyledButton = styled.button`
   padding: 1.2rem 2.4rem;
   font-size: 1.4rem;
   transition: all 0.2s;
-
   display: flex;
   align-items: center;
   gap: 1.6rem;
-
   &:hover {
     background-color: var(--color-grey-50);
   }
-
   & svg {
     width: 1.6rem;
     height: 1.6rem;
@@ -105,7 +98,6 @@ function Toggle({ id }) {
 function List({ id, children }) {
   const { openId, position, close } = useContext(MenusContext);
   const ref = useOutsideClick(close, false);
-
   if (openId !== id) return null;
 
   return createPortal(
@@ -118,6 +110,7 @@ function List({ id, children }) {
 
 function Button({ children, icon, onClick }) {
   const { close } = useContext(MenusContext);
+
   function handleClick() {
     onClick?.();
     close();

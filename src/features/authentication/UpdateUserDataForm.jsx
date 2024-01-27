@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import Button from '../../ui/Button';
 import FileInput from '../../ui/FileInput';
 import Form from '../../ui/Form';
@@ -10,7 +9,6 @@ import { useUser } from './useUser';
 import { useUpdateUser } from './useUpdateUser';
 
 function UpdateUserDataForm() {
-  // We don't need the loading state, and can immediately use the user data, because we know that it has already been loaded at this point
   const {
     user: {
       email,

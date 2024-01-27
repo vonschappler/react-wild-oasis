@@ -8,7 +8,6 @@ const ButtonText = styled.button`
   background: none;
   border: none;
   border-radius: var(--border-radius-sm);
-
   &:hover,
   &:active {
     color: var(--color-brand-700);

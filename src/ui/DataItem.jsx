@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledDataItem = styled.div`
   display: flex;
@@ -12,7 +12,6 @@ const Label = styled.span`
   align-items: center;
   gap: 0.8rem;
   font-weight: 500;
-
   & svg {
     width: 2rem;
     height: 2rem;
