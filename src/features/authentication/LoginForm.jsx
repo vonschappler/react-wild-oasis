@@ -63,7 +63,7 @@ function LoginForm() {
         </Heading>
         <br />
         <Heading as='p'>
-          Feel free to test it, with the credendials below:
+          Feel free to test it, with the credentials below:
         </Heading>
         <br />
         <Heading as='p'>Email address: hetev79609@evvgo.com</Heading>
